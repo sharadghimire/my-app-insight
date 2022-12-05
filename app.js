@@ -1,5 +1,6 @@
+let process=require("process");
 let appInsights = require("applicationinsights");
-appInsights.setup("<connection_string>")
+appInsights.setup(process.env.APPLICATIONINSIGHTS_CONNECTION_STRING);
     .setAutoDependencyCorrelation(true)
     .setAutoCollectRequests(true)
     .setAutoCollectPerformance(true, true)
